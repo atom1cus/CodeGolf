@@ -1,0 +1,1 @@
+require'date';r="released in";def d(d)n=Date.new(1996,1)>>d;"#{Date::MONTHNAMES[n.month]} #{n.year}"end;{"1.0":0,"1.1":13,"1.2":35,"1.3":52,"1.4":73,"5":104,"6":131,"7":186,"8":218,"9":260,"10":266}.each{|v,d|puts"JDK #{v} was #{r} #{d(d)}"};32.times{|i|puts "JDK #{11+i} will be #{r} #{d(272+i*6)}"}

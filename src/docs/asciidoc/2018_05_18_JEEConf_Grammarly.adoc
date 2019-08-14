@@ -1,0 +1,197 @@
+﻿= Grammarly Code Golf
+
+This repository contains copies of solutions from https://grammarly.ai/code-golf/[Grammarly Tech Challenge] on https://jeeconf.com/[JEEConf 2018].
+
+== Tech Challenge
+Recently, Java moved to 6-month release cadence. The task is to print the Java releases timeline — up to JDK 42 in March 2034. This is ’’code golf’’, so the shortest code wins (we count only non-whitespace characters). 
+
+Bring your laptop to the Grammarly booth and show your working code to our team. The competition ends on May 19th 2019 at 15:30.
+
+=== Output example
+```
+JDK 1.0 was released in January 1996
+JDK 1.1 was released in February 1997
+JDK 1.2 was released in December 1998
+JDK 1.3 was released in May 2000
+JDK 1.4 was released in February 2002
+JDK 5 was released in September 2004
+JDK 6 was released in December 2006
+JDK 7 was released in July 2011
+JDK 8 was released in March 2014
+JDK 9 was released in September 2017
+JDK 10 was released in March 2018
+JDK 11 will be released in September 2018
+JDK 12 will be released in March 2019
+JDK 13 will be released in September 2019
+JDK 14 will be released in March 2020
+
+... //print all lines between JDK 14 and 42 too
+
+JDK 42 will be released in SEPTEMBER 2034
+```
+
+=== The rules
+* Use any JVM language. All languages compete separately: Java, Scala, Groovy, Kotlin, Clojure, JRuby — whatever you feel lucky about.
+* You can submit many programs.
+* New lines must be preserved but casing is optional.
+* In runtime, your code should not depend on external services or libraries (except for the standart library for your language).
+* The judges will try to resolve fairly and disputes and ambiguities.
+
+== Grammarly Code Golf Results
+
+_Text below from https://grammarly.ai/code-golf/[Official Grammarly Code Golf Results]._
+
+Друзі, публікуємо коди переможців та найбільш творчі рішення Grammarly Code Golf, який ми проводили під час JEEConf 2018. Умови конкурсу перед вами.
+
+Кожна мова змагалась окремо, а тому будь-який розв’язок на одній із екзотичних мов одразу ставав претендентом на перемогу. Ми отримали два розв’язки на JRuby і два на Ceylon.
+
+=== JRuby
+
+На JRuby кращим став код Олега Скляренка, що мав 287 символів:
+
+[source,jruby]
+----
+include::../../main/jruby/code-golf-jruby-1.rb[]
+----
+
+=== Ceylon
+
+Олександр Єрмілов став першим на Ceylon, вклавшись у 317 символів:
+
+[source,ceylon]
+----
+include::../../main/ceylon/code-golf-ceylon-1.ceylon[]
+----
+
+=== JavaScript 
+
+Крім того, переможцями стали єдиний розв’язок на JavaScript — йому знадобилося лише реалізувати найпростішу логіку (Сергій Бішир, 1631 символ!) за допомогою Nashorn.
+
+=== Jython
+I єдиний розв’язок на Jython від Андрія Волошина довжиною 277 символів:
+
+[source,jython]
+----
+include::../../main/jython/code-golf-jython-1.py[]
+----
+
+=== Clojure 
+
+Серед 6 розв’язків на Clojure і 14 на Kotlin перемогли ті, де найбільш економно була реалізована єдина логіка для виведення всіх рядків тексту. На Clojure Максиму Соломкіну для цього знадобилося 302 символи: 
+
+[source,clojure]
+----
+include::../../main/clojure/code-golf-clojure-1.clj[]
+----
+
+=== Kotlin 
+
+A Маргариті Недзельській на Kotlin — усього 301:
+
+[source,kotlin]
+----
+include::../../main/kotlin/code-golf-kotlin-1.kt[]
+----
+
+=== Java 
+
+Найбільше учасників — 16 — змагалися на Java. Тут найкращими виявилися розв’язки, в яких текст був закодований у число (211 символів, рішення Віктора Поліщука):
+
+[source,java]
+----
+include::../../main/java/code-golf-java-3.java[]
+----
+
+Та у рядок (198 символів, код Юрія Махна):
+
+[source,java]
+----
+include::../../main/java/code-golf-java-1.java[]
+----
+
+=== Groovy 
+
+Серед 7 учасників, що використали Groovy, троє до останньої секунди змагалися лише за допомогою можливостей самої мови. Врешті-решт, їх розділило лише 6 символів, і найкоротший розв’язок Тараса Пєтушкова зайняв всього 168: 
+
+[source,groovy]
+----
+include::../../main/groovy/code-golf-groovy-1.groovy[]
+----
+
+Наступним іде Тарас Когут та його код довжиною 170 символів:
+
+[source,groovy]
+----
+include::../../main/groovy/code-golf-groovy-2.groovy[]
+----
+
+Третій розв'язок відстає зовсім трошки: 174 символи.
+
+[source,groovy]
+----
+include::../../main/groovy/code-golf-groovy-3.groovy[]
+----
+
+=== Scala
+
+Проте по-справжньому зламали систему любителі Scala. Двоє учасників максимально скористалися тим, що ми не рахували whitespace characters, і закодували текст, який потрібно було вивести, саме за їх допомогою! Отож, 66 (а загалом — 104529) символів — перший результат і перемога Тараса Пєтушкова у ще одній номінації:
+
+link:../../main/scala/code-golf-scala-1.scala[code-golf-scala-1.scala]
+
+[source,scala]
+----
+object A extends App {
+  for {
+    l ← ("""
+
+
+         //thouthands lines with spaces
+
+
+                                """) lines
+  } print(l.size toChar)
+}
+----
+
+Другим став Олександр Максименко — у його коді 79 символів (а загалом — 133524):
+
+link:../../main/scala/code-golf-scala-2.scala[code-golf-scala-2.scala]
+
+[source,scala]
+----
+object A extends App {
+  """
+
+  //thouthands lines with spaces
+
+
+ """ split " " map(_.length.toChar) foreach print
+}
+----
+
+== Leaderboard
+
+[%header,format=csv]
+|===
+Language, Submissions count, Participants count, Symbols count, Winner
+Ceylon, 2, 2, 317, Olexandr Yermilov    
+, , , 361,                      
+Clojure, 6, 3, 302, Maksym Solomkin      
+, , , 374,                      
+, , , 392,                      
+Groovy, 21, 7, 168, Taras Petushkov      
+, , , 170,                      
+, , , 174,                      
+Java, 28, 16, 198, Yuri Makhno          
+, , , 242,                      
+, , , 211,                      
+JavaScript/Nashorn, 1, 1, 1631, Sergii Bishyr        
+JRuby, 2, 2, 287, Oleh Sklyarenko      
+Jython, 2, 1, 277, Andriy Voloshyn      
+Kotlin, 14, 5, 301, Marharyta Nedzelska  
+, , , 352,                      
+, , , 380,                      
+Scala, 11, 5, 66, Taras Petushkov      
+, , , 79,                      
+, , , 288,                      
+|===
