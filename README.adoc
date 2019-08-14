@@ -4,4 +4,4 @@ https://en.wikipedia.org/wiki/Code_golf[Code golf] (wiki) is a type of recreatio
 
 This repository contains copies of solutions from some code golf challenges:
 
-* link:src/docs/asciidoc/2018_05_18_JEEConf_Grammarly.adoc[Grammarly Code Golf] on [JEEConf 2018](https://jeeconf.com/)
+* link:src/docs/asciidoc/2018_05_18_JEEConf_Grammarly.adoc[Grammarly Code Golf] on https://jeeconf.com/[JEEConf 2018]
