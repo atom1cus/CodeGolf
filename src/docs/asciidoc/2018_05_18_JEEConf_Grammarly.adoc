@@ -265,7 +265,7 @@ object A extends App {
     l ← ("""
 
 
-         //thouthands lines with spaces
+         //thousands lines with spaces
 
 
                                 """) lines
@@ -282,7 +282,7 @@ link:../../main/scala/code-golf-scala-2.scala[code-golf-scala-2.scala]
 object A extends App {
   """
 
-  //thouthands lines with spaces
+  //thousands lines with spaces
 
 
  """ split " " map(_.length.toChar) foreach print
